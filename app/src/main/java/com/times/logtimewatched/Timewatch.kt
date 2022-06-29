@@ -62,7 +62,7 @@ open class Timewatch : AppCompatActivity(), View.OnClickListener {
     {
         if(Views?.id == R.id.TimeStart)
         {
-            var badConvert = inTime.toString().toLong()
+            var badConvert = inTime.text.toString().toLong()
             setTimePomodoro(badConvert)
         }
     }
