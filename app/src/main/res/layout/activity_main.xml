@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layout_margin="15dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ImLogo"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/DynamicModal"
+        android:layout_height="150dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_baseline_access_time_24"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+        </ImageView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/DynamicModal"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ImLogo">
+
+        <TextView
+            android:id="@+id/titleEmails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Emails"
+            android:textColor="@color/black"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/username"
+            />
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:paddingStart="5dp"
+            android:hint="Email"
+            android:background="@drawable/form"
+            android:inputType="textEmailAddress"
+            app:layout_constraintTop_toBottomOf="@id/titleEmails"
+            app:layout_constraintBottom_toTopOf="@id/titlePasswords"
+            />
+
+        <TextView
+            android:id="@+id/titlePasswords"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Passwords"
+            android:textColor="@color/black"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toBottomOf="@id/username"
+            app:layout_constraintBottom_toTopOf="@id/password"
+            />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:textSize="32px"
+            android:paddingStart="5dp"
+            android:layout_below="@+id/username"
+            android:hint="Password"
+            android:background="@drawable/form"
+            android:inputType="textPassword"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titlePasswords"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/DynamicButton"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_gravity="center|center_vertical"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+        <Button
+            android:id="@+id/ModalLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textSize="24px"
+            app:layout_constraintBottom_toTopOf="@+id/textActivity"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </Button>
+
+        <TextView
+            android:id="@+id/textActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Doesn't Have account, wanna create one"
+            android:textSize="24px"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@id/ModalLogin"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/Accounts"
+            app:layout_constraintBottom_toTopOf="@id/textActivityNoLogin">
+        </TextView>
+
+        <Button
+            android:id="@+id/Accounts"
+            android:layout_width="wrap_content"
+            android:layout_height="32px"
+            android:background="@drawable/shapes"
+            android:text="Create Account"
+            android:textSize="24px"
+            app:layout_constraintLeft_toRightOf="@id/textActivity"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ModalLogin"
+            app:layout_constraintBottom_toTopOf="@id/textActivityNoLogin">
+        </Button>
+
+        <TextView
+            android:id="@+id/textActivityNoLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="32px"
+            android:textSize="24px"
+            android:text="Just Login"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@id/NoLogin"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textActivity">
+        </TextView>
+
+        <Button
+            android:id="@+id/NoLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20px"
+            android:text="Login As Guess"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textActivityNoLogin" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

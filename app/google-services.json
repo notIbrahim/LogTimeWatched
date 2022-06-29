@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "322200542968",
+    "project_id": "logtimewatch",
+    "storage_bucket": "logtimewatch.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:322200542968:android:fa7bf64b779b3631fc650d",
+        "android_client_info": {
+          "package_name": "com.times.logtimewatched"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "322200542968-4ati5e2ka37cg75r5eotjqhujvsqa0a5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnQ-ZPXWc2xes2wqQnIzdO93Wd0yrQE7E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "322200542968-4ati5e2ka37cg75r5eotjqhujvsqa0a5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
