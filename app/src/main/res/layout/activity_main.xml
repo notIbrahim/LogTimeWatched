@@ -52,13 +52,14 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_margin="10dp"
-            android:paddingStart="5dp"
-            android:hint="Email"
             android:background="@drawable/form"
+            android:hint="Email"
             android:inputType="textEmailAddress"
-            app:layout_constraintTop_toBottomOf="@id/titleEmails"
+            android:paddingStart="5dp"
+            android:textSize="32px"
             app:layout_constraintBottom_toTopOf="@id/titlePasswords"
-            />
+            app:layout_constraintTop_toBottomOf="@id/titleEmails"
+            tools:layout_editor_absoluteX="10dp" />
 
         <TextView
             android:id="@+id/titlePasswords"
