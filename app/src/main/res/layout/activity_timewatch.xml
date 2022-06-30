@@ -33,20 +33,53 @@
             app:layout_constraintVertical_bias="0.501"></TextView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id = "@+id/setTimes"
+        android:id="@+id/setTimes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <EditText
-            android:id = "@+id/timesets"
-            android:layout_width="150dp"
-            android:inputType="number"
+            android:id="@+id/Hours"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/form"
+            android:inputType="numberDecimal"
+            android:textAlignment="center"
+            android:hint="Hours"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent">
+            app:layout_constraintRight_toLeftOf="@id/Minutes"
+            app:layout_constraintTop_toTopOf="parent">
         </EditText>
+        <EditText
+            android:id="@+id/Minutes"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/form"
+            android:inputType="numberDecimal"
+            android:textAlignment="center"
+            android:hint="Minutes"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/Hours"
+            app:layout_constraintRight_toLeftOf="@id/Second"
+            app:layout_constraintTop_toTopOf="parent">
+        </EditText>
+
+        <EditText
+            android:id="@+id/Second"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/form"
+            android:inputType="numberDecimal"
+            android:textAlignment="center"
+            android:hint="Second"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/Minutes"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </EditText>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
     <!--
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -146,6 +179,16 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             />
+        <TextView
+            android:id = "@+id/InfoUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            app:layout_constraintTop_toBottomOf="@id/Logout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent">
+        </TextView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
