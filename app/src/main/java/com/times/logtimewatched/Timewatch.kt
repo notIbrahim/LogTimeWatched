@@ -88,11 +88,71 @@ open class Timewatch : AppCompatActivity(), View.OnClickListener
     {
         if(Views?.id == R.id.TimeStart)
         {
-            var handle_hours = hours!!.text.toString().toLong() * 3600000
-            var handle_minute = minutes!!.text.toString().toLong() * 60000
-            var handle_second = seconds!!.text.toString().toLong() * 1000
-            var times = (handle_hours + handle_minute + handle_second)
-            setTimePomodoro(times)
+            if(hours.text.isNotEmpty() && minutes.text.isNotEmpty() && seconds.text.isNotEmpty())
+            {
+                var handle_hours = hours!!.text.toString().toLong() * 3600000
+                var handle_minute = minutes!!.text.toString().toLong() * 60000
+                var handle_second = seconds!!.text.toString().toLong() * 1000
+                var times = (handle_hours + handle_minute + handle_second)
+                setTimePomodoro(times)
+            }
+            // T F T
+            if(hours.text.isNotEmpty() && minutes.text.isEmpty() && seconds.text.isNotEmpty())
+            {
+                var handle_hours = hours!!.text.toString().toLong() * 3600000
+                var handle_minute = 0
+                var handle_second = seconds!!.text.toString().toLong() * 1000
+                var times = (handle_hours + handle_minute + handle_second)
+                setTimePomodoro(times)
+            }
+            // T F F
+            if(hours.text.isNotEmpty() && minutes.text.isEmpty() && seconds.text.isEmpty())
+            {
+                var handle_hours = hours!!.text.toString().toLong() * 3600000
+                var handle_minute = 0
+                var handle_second = 0
+                var times = (handle_hours + handle_minute + handle_second)
+                setTimePomodoro(times)
+            }
+            // F T T
+            if(hours.text.isEmpty() && minutes.text.isNotEmpty() && seconds.text.isNotEmpty())
+            {
+                var handle_hours = 0
+                var handle_minute = minutes!!.text.toString().toLong() * 60000
+                var handle_second = seconds!!.text.toString().toLong() * 1000
+                var times = (handle_hours + handle_minute + handle_second)
+                setTimePomodoro(times)
+            }
+            
+            // F T F
+            if(hours.text.isEmpty() && minutes.text.isNotEmpty() && seconds.text.isEmpty())
+            {
+                var handle_hours = 0
+                var handle_minute = minutes!!.text.toString().toLong() * 60000
+                var handle_second = 0
+                var times = (handle_hours + handle_minute + handle_second)
+                setTimePomodoro(times)
+            }
+            // F F T
+
+            if(hours.text.isEmpty() && minutes.text.isEmpty() && seconds.text.isNotEmpty())
+            {
+                var handle_hours = 0
+                var handle_minute = 0
+                var handle_second = seconds!!.text.toString().toLong() * 1000
+                var times = (handle_hours + handle_minute + handle_second)
+                setTimePomodoro(times)
+            }
+            else
+            {
+                var handle_hours = 0
+                var handle_minute = 0
+                var handle_second = 0
+                var times = (handle_hours + handle_minute + handle_second)
+                setTimePomodoro(times.toLong())
+            }
+
+            // F F F
         }
 
         if(Views?.id == R.id.Logout)
